@@ -1,0 +1,35 @@
+pipeline{
+	agent any 
+	stages{
+		stage('planning'){
+			steps{
+			   echo "Ida Nzengung"
+			}
+		}
+		stage('design'){
+			steps{
+				echo "Allon Jose"
+			}
+		}
+		stage('development'){
+			steps{
+				echo "Terence Fomenky"
+			}
+		}
+		stage('testing'){
+			steps{
+				echo "Desmond Asaha"
+			}
+		}
+		stage('deployment'){
+			steps{
+				echo "Therese Meylam"
+			}
+		}
+		stage('maintenance'){
+			steps{
+				echo "Jarvis Esele"
+			}
+		}
+	}
+}
