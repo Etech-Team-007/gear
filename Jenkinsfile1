@@ -8,7 +8,7 @@ pipeline{
 		}
 		stage('Greetings'){
 			steps{
-				echo "Here are the names for group1 members"
+				echo "Here are the names of group1 members"
 			}
 		}
 		stage('planning'){
