@@ -3,12 +3,12 @@ pipeline{
 	stages{
 		stage('jenk'){
 			steps{
-				echo "Here are the names for group1 members:"
+				echo "Welcome To Etech Consulting Devops MasterClass Team7!!!"
 			}
 		}
 		stage('Greetings'){
 			steps{
-				echo "Welcome To Etech Consulting Devops MasterClass Team7!!!"
+				echo "Here are the names for group1 members"
 			}
 		}
 		stage('planning'){
