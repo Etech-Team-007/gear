@@ -1,12 +1,12 @@
 pipeline{
 	agent any
 	stages{
-		stage('jenk'){
+		stage('Greetings'){
 			steps{
 				echo "Welcome To Etech Consulting Devops MasterClass Team7!!!"
 			}
 		}
-		stage('Greetings'){
+		stage('appbank'){
 			steps{
 				echo "Here are the names of group1 members"
 			}
