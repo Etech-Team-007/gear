@@ -1,35 +1,39 @@
 pipeline{
 	agent any 
 	stages{
-		stage('planning'){
+		stage('automation'){
 			steps{
-               checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'team-7', url: 'https://github.com/Etech-Team-007/gear.git']])
-			   echo "Ida Nzengung"
-			}
+			   checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'team-7', url: 'https://github.com/Etech-Team-007/gear.git']])
+			}  echo "Welcome To Etech Consulting Devops MasterClass!!!"
 		}
-		stage('design'){
+		stage('planning'){
 			steps{
 				echo "Allon Jose"
 			}
 		}
-		stage('development'){
+		stage('design'){
 			steps{
 				echo "Terence Fomenky"
 			}
 		}
-		stage('testing'){
+		stage('development'){
 			steps{
 				echo "Desmond Asaha"
 			}
 		}
-		stage('deployment'){
+		stage('testing'){
 			steps{
 				echo "Therese Meylam"
 			}
 		}
-		stage('maintenance'){
+		stage('deployment'){
 			steps{
 				echo "Jarvis Esele"
+			}
+		}
+		stage('maintenance'){
+			steps{
+				eche "Ida Nzengung"
 			}
 		}
 	}
