@@ -4,7 +4,7 @@ pipeline{
 		stage('automation'){
 			steps{
 				checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'team-7', url: 'https://github.com/Etech-Team-007/gear.git']])
-				echo "Welcome To Etech Consulting MasterClass Team7!!!"
+				sh echo "Welcome To Etech Consulting MasterClass Team7!!!"
 			}
 		}
 		stage('planning'){
