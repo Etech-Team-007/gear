@@ -1,0 +1,25 @@
+pipeline{
+	agent any 
+	stages{
+		stage('clonecode'){
+			steps{
+				checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'team7-git-id', url: 'https://github.com/Etech-Team-007/jenkins.git']])
+			}
+		}
+		stage('artifactbuild'){
+			steps{
+				sh "df -h"
+			}
+		}
+		stage('unitest'){
+			steps{
+				sh "lsblk"
+			}
+		}
+		stage('maintenance'){
+			steps{
+				sh "lscpu"
+			}
+		}
+	}
+}
