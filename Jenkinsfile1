@@ -11,32 +11,32 @@ pipeline{
 				echo "Here are the names of group1 members"
 			}
 		}
-		stage('planning'){
+		stage('ida'){
 			steps{
 				echo "Ida Nzengung"
 			}
 		}
-		stage('design'){
+		stage('allon'){
 			steps{
 				echo "Allon Jose"
 			}
 		}
-		stage('development'){
+		stage('terence'){
 			steps{
 				echo "Terence Fomenky"
 			}
 		}
-		stage('testing'){
+		stage('desmond'){
 			steps{
 				echo "Desmond Asaha"
 			}
 		}
-		stage('deployment'){
+		stage('therese'){
 			steps{
 				echo "Therese Meylam"
 			}
 		}
-		stage('maintenance'){
+		stage('jarvis'){
 			steps{
 				echo "Jarvis Esele"
 			}
