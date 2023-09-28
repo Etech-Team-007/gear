@@ -1,6 +1,13 @@
+Declarative Pipeline
+
 pipeline{
 	agent any 
 	stages{
+		stage('intro'){
+			steps{
+				checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'team-7', url: 'https://github.com/Etech-Team-007/gear.git']])
+			}
+		}
 		stage('planning'){
 			steps{
 				sh 'pwd'
