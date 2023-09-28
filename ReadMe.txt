@@ -19,7 +19,7 @@ git checkout -b branch_name
 
 git add .
 
-git commit -m "Descriptive comit message"
+git commit -m "Descriptive commit message"
 
 git push --set-upstream origin branch_name
 
