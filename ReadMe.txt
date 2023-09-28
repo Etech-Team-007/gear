@@ -3,11 +3,11 @@
 
 $ git checkout main
 
-#Clone your repo if you don't have the repo 
+#Clone your repo if you don't have the repository
 
 $ git clone <repo_url>
 
-#If you have the repo already, do
+#If you have the repository already, do
 
 $ git pull 
 
