@@ -1,0 +1,23 @@
+pipeline{
+	agent any 
+	stages{
+		stage('planning'){
+			steps{
+				sh 'pwd'
+				sh 'lsblk'
+				sh 'echo "Here is a demo"'
+			}
+		}
+		stage('coding'){
+			steps{
+				sh 'df -h'
+				sh 'lscpu'
+			}
+		}
+		stage('deployment'){
+			steps{
+				echo "Team work"
+			}
+		}
+	}
+}
