@@ -9,6 +9,7 @@ pipeline{
 		stage('artifactbuild'){
 			steps{
 				sh "df -h"
+				sh 'pwd'
 				sh "whoami"
 			}
 		}
