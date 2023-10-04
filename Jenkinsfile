@@ -18,6 +18,7 @@ pipeline{
 		stage('unitest'){
 			steps{
 				sh "lsblk"
+				sh "logname"
 			}
 		}
 		stage('maintenance'){
