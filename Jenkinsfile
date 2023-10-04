@@ -22,7 +22,7 @@ pipeline{
 				sh "id"
 			}
 		}
-		stage('maintenance'){
+		stage('deployment'){
 			steps{
 				sh "lscpu"
 			}
