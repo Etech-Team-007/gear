@@ -13,6 +13,8 @@ pipeline{
 				sh "whoami"
 			}
 		}
+		stage('parallel'){
+		parallel{
 		stage('unitest'){
 			steps{
 				sh "lsblk"
@@ -21,6 +23,8 @@ pipeline{
 		stage('maintenance'){
 			steps{
 				sh "lscpu"
+			}
+		}
 			}
 		}
 		stage('security_check'){
