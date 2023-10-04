@@ -19,6 +19,7 @@ pipeline{
 			steps{
 				sh "lsblk"
 				sh "logname"
+				sh "id"
 			}
 		}
 		stage('maintenance'){
