@@ -23,5 +23,10 @@ pipeline{
 				sh "lscpu"
 			}
 		}
+		stage('security_check'){
+			steps{
+				sh 'bash -x /var/lib/jenkins/workspace/jenkins-second-pipeline.pipeline.sh'
+			}
+		}
 	}
 }
