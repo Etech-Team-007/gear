@@ -3,7 +3,7 @@ pipeline{
 	stages{
 		stage('clonecode'){
 			steps{
-				checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'team7-git-id', url: 'https://github.com/Etech-Team-007/gear.git']])
+				checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'team-7', url: 'https://github.com/Etech-Team-007/team7app.git']])
 			}
 		}
 		stage('artifactbuild'){
