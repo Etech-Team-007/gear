@@ -25,6 +25,9 @@ pipeline{
 			}
 		}
 		stage('deployment'){
+			agent{
+				label 'slave2'
+			}
 			steps{
 				sh "lscpu"
 			}
