@@ -7,6 +7,7 @@ pipeline{
 			}
 		}
 		stage('artifactbuild'){
+			agent {label'slave1'}
 			steps{
 				sh "df -h"
 				sh 'pwd'
@@ -14,6 +15,7 @@ pipeline{
 			}
 		}
 		stage('parallel'){
+			agent {label'slave2'}
 		parallel{
 		stage('unitest'){
 			steps{
@@ -30,6 +32,7 @@ pipeline{
 			}
 		}
 		stage('security_check'){
+			agent {label'slave1'}
 			steps{
 				sh 'bash -x /var/lib/jenkins/workspace/jenkins-second-pipeline/pipeline.sh'
 			}
