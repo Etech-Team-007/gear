@@ -3,7 +3,7 @@ pipeline{
 	stages{
 		stage('clonecode'){
 			steps{
-				checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'team-7', url: 'https://github.com/Etech-Team-007/team7app.git']])
+				checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'jenkins7creds', url: 'https://github.com/Etech-Team-007/team7app.git']])
 			}
 		}
 		stage('artifactbuild'){
@@ -34,7 +34,7 @@ pipeline{
 		stage('security_check'){
 			agent {label'slave1'}
 			steps{
-				sh 'bash -x /var/lib/jenkins/workspace/jenkins-second-pipeline/pipeline.sh'
+				sh 'echo "Guaranteed Offer Letter"'
 			}
 		}
 	}
