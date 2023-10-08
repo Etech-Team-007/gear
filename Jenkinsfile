@@ -9,7 +9,6 @@ pipeline{
 			}
 		}
 		stage('artifactbuild'){
-			agent {label'slave1'}
 			steps{
 				sh "df -h"
 				sh 'pwd'
