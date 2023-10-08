@@ -1,5 +1,7 @@
 pipeline{
-	agent any 
+	agent{
+		label 'slave1'
+	} 
 	stages{
 		stage('clonecode'){
 			steps{
@@ -15,7 +17,6 @@ pipeline{
 			}
 		}
 		stage('parallel'){
-			agent {label'slave2'}
 		parallel{
 		stage('unitest'){
 			steps{
@@ -32,7 +33,9 @@ pipeline{
 			}
 		}
 		stage('security_check'){
-			agent {label'slave1'}
+			agent{
+				label 'slave1'
+			}
 			steps{
 				sh 'echo "Guaranteed Offer Letter"'
 			}
