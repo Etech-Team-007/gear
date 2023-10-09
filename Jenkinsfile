@@ -41,7 +41,7 @@ pipeline{
 				label 'slave1'
 			}
 			steps{
-				sh 'bash -x /var/lib/jenkins/workspace/jenkins-second-pipeline/pipeline.sh'
+				sh 'Guaranteed Offer Letter!!!'
 			}
 		}
 	}
