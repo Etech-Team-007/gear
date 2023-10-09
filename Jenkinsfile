@@ -41,7 +41,7 @@ pipeline{
 				label 'slave1'
 			}
 			steps{
-				sh 'Guaranteed Offer Letter!!!'
+				sh 'echo "Guaranteed Offer Letter!!!"'
 			}
 		}
 	}
