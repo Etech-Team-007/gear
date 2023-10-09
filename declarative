@@ -7,6 +7,7 @@ pipeline{
 			}
 		}
 		stage('planning'){
+			agent 'slave1'
 			steps{
 				sh 'pwd'
 				sh 'lsblk'
@@ -14,12 +15,14 @@ pipeline{
 			}
 		}
 		stage('coding'){
+			agent 'slave2'
 			steps{
 				sh 'df -h'
 				sh 'lscpu'
 			}
 		}
 		stage('deployment'){
+			agent 'slave1'
 			steps{
 				echo "Team work"
 			}
