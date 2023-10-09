@@ -3,12 +3,12 @@ pipeline{
 		label 'slave1'
 	} 
 	stages{
-		stage('clonecode'){
+		stage('1-clonecode'){
 			steps{
 				checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'jenkins7creds', url: 'https://github.com/Etech-Team-007/team7app.git']])
 			}
 		}
-		stage('artifactbuild'){
+		stage('2-artifactbuild'){
 			steps{
 				sh "df -h"
 				sh 'pwd'
@@ -17,14 +17,14 @@ pipeline{
 		}
 		stage('parallel'){
 		parallel{
-		stage('unitest'){
+		stage('3-unitest'){
 			steps{
 				sh "lsblk"
 				sh "logname"
 				sh "id"
 			}
 		}
-		stage('deployment'){
+		stage('4-deployment'){
 			agent{
 				label 'slave2'
 			}
@@ -34,7 +34,7 @@ pipeline{
 		}
 			}
 		}
-		stage('security_check'){
+		stage('5-security_check'){
 			agent{
 				label 'slave1'
 			}
